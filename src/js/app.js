@@ -33,14 +33,30 @@ function render(variables = {}) {
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
             <img src="${variables.avatarURL}" class="photo" />
-            <h1>${variables.name}, ${variables.lastName}</h1>
-            <h2>${variables.role}</h2>
-            <h3>${variables.city},${variables.country}</h3>
+            <h1>${variables.name == null ? "Greta" : variables.name}, ${
+    variables.lastName == null ? "Gretos" : variables.lastName
+  }</h1>
+            <h2>${
+              variables.role == null ? "project manager" : variables.role
+            }</h2>
+            <h3>${variables.city == null ? "Montevideo" : variables.city},${
+    variables.country == null ? "Uruguay" : variables.country
+  }</h3>
             <ul class=${variables.SocialMediaPosition}>
-            <li><a href="https://twitter.com/${variables.twitter}"><i class='fab fa-twitter' ></i></a></li>
-            <li><a href="https://github.com/${variables.github}"><i class='fab fa-github'></i></a></li>
-            <li><a href="https://linkedin.com/${variables.linkedin}"><i class='fab fa-linkedin'></i></a></li>
-            <li><a href="https://instagram.com/${variables.instagram}"><i class='fab fa-instagram'></i></a></li>
+            <li><a href="https://twitter.com/${
+              variables.twitter == null ? "4GeeksAcademy" : variables.twitter
+            }"><i class='fab fa-twitter' ></i></a></li>
+            <li><a href="https://github.com/${
+              variables.github == null ? "4GeeksAcademy" : variables.github
+            }"><i class='fab fa-github'></i></a></li>
+            <li><a href="https://linkedin.com/${
+              variables.linkedin == null ? "4GeeksAcademy" : variables.linkedin
+            }"><i class='fab fa-linkedin'></i></a></li>
+            <li><a href="https://instagram.com/${
+              variables.instagram == null
+                ? "4GeeksAcademy"
+                : variables.instagram
+            }"><i class='fab fa-instagram'></i></a></li>
         </ul>
           </ul>
         </div>
