@@ -42,7 +42,11 @@ function render(variables = {}) {
             <h3>${variables.city == null ? "Montevideo" : variables.city},${
     variables.country == null ? "Uruguay" : variables.country
   }</h3>
-            <ul class=${variables.SocialMediaPosition}>
+            <ul class=${
+              variables.socialMediaPosition == "position-right"
+                ? "position-right"
+                : "position-left"
+            }>
             <li><a href="https://twitter.com/${
               variables.twitter == null ? "4GeeksAcademy" : variables.twitter
             }"><i class='fab fa-twitter' ></i></a></li>
@@ -75,7 +79,7 @@ window.onload = function() {
     // this is the url for the profile avatar
     avatarURL: "https://randomuser.me/api/portraits/women/42.jpg",
     // social media bar position (left or right)
-    socialMediaPosition: "position-left",
+    socialMediaPosition: "position-right",
     // social media usernames
     twitter: null,
     github: "alesanchezr",
